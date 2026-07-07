@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Chintha Saikrishna — Computer Science Student & Developer</title>
+<meta name="description" content="Portfolio of Chintha Saikrishna — Computer Science student, full-stack developer, Hyderabad." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400..700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+
+<canvas id="starfield"></canvas>
+
+<!-- NAV -->
+<header class="nav">
+  <a href="#top" class="brand">
+    <svg class="brand-mark" viewBox="0 0 40 40" width="26" height="26">
+      <circle cx="20" cy="20" r="17" fill="none" stroke="url(#navGrad)" stroke-width="2"/>
+      <ellipse cx="20" cy="20" rx="17" ry="6" fill="none" stroke="url(#navGrad)" stroke-width="1.2" opacity="0.7"/>
+      <circle cx="20" cy="20" r="3" fill="url(#navGrad)"/>
+      <defs>
+        <linearGradient id="navGrad" x1="0" y1="0" x2="40" y2="40">
+          <stop offset="0" stop-color="#8b5cf6"/>
+          <stop offset="1" stop-color="#38bdf8"/>
+        </linearGradient>
+      </defs>
+    </svg>
+    <span>saikrishna</span>
+  </a>
+  <nav class="nav-links">
+    <a href="#log">Mission Log</a>
+    <a href="#cargo">Cargo</a>
+    <a href="#launchpad">Launchpad</a>
+    <a href="#transmissions">Badges</a>
+  </nav>
+  <a href="#contact" class="btn btn-primary nav-cta">Get in touch</a>
+  <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">☰</button>
+</header>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-text">
+    <p class="eyebrow">COMPUTER SCIENCE STUDENT · HYDERABAD</p>
+    <h1>Building things<br>that <span class="grad-text">orbit the web.</span></h1>
+    <p class="hero-sub">
+      I'm Chintha Saikrishna — a final-year CS student who ships full-stack apps and
+      browser extensions, and spends the rest of the time chasing rating points on
+      competitive programming judges.
+    </p>
+    <div class="hero-actions">
+      <a href="#launchpad" class="btn btn-primary">View projects</a>
+      <a href="#contact" class="btn btn-ghost">Get in touch</a>
+    </div>
+    <div class="hero-links">
+      <a href="https://github.com/saikrishna1506/" target="_blank" rel="noopener">GitHub ↗</a>
+      <a href="https://www.linkedin.com/in/sai-krishna123321/" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
+  </div>
+
+  <div class="hero-globe-wrap">
+    <div class="orbit-system" id="orbitSystem">
+      <svg class="globe" viewBox="0 0 400 400" aria-hidden="true">
+        <defs>
+          <radialGradient id="globeGlow" cx="50%" cy="45%" r="60%">
+            <stop offset="0%" stop-color="#2b3170"/>
+            <stop offset="100%" stop-color="#0f1330" stop-opacity="0"/>
+          </radialGradient>
+          <linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#8b5cf6"/>
+            <stop offset="1" stop-color="#38bdf8"/>
+          </linearGradient>
+        </defs>
+        <circle cx="200" cy="200" r="170" fill="url(#globeGlow)"/>
+        <circle cx="200" cy="200" r="140" fill="none" stroke="#2a2f5c" stroke-width="1"/>
+        <g class="globe-rotate">
+          <ellipse cx="200" cy="200" rx="140" ry="140" fill="none" stroke="#343a6e" stroke-width="1"/>
+          <ellipse cx="200" cy="200" rx="140" ry="52" fill="none" stroke="#343a6e" stroke-width="1"/>
+          <ellipse cx="200" cy="200" rx="140" ry="95" fill="none" stroke="#343a6e" stroke-width="1"/>
+          <ellipse cx="200" cy="200" rx="52" ry="140" fill="none" stroke="#3a4080" stroke-width="1"/>
+          <ellipse cx="200" cy="200" rx="95" ry="140" fill="none" stroke="#3a4080" stroke-width="1"/>
+          <line x1="60" y1="200" x2="340" y2="200" stroke="#343a6e" stroke-width="1"/>
+        </g>
+        <circle cx="200" cy="200" r="140" fill="none" stroke="url(#ringGrad)" stroke-width="1.5" opacity="0.55"/>
+        <!-- data pulse nodes on the globe -->
+        <circle class="node-pulse" cx="150" cy="140" r="3" fill="#38bdf8"/>
+        <circle class="node-pulse delay-1" cx="260" cy="230" r="3" fill="#8b5cf6"/>
+        <circle class="node-pulse delay-2" cx="210" cy="290" r="3" fill="#38bdf8"/>
+      </svg>
+
+      <!-- Orbiting achievement satellites -->
+      <div class="orbit-path orbit-1"><div class="satellite" data-tip="CodeChef — 2★ rated">CC</div></div>
+      <div class="orbit-path orbit-2"><div class="satellite" data-tip="LeetCode — rating 1500">LC</div></div>
+      <div class="orbit-path orbit-3"><div class="satellite" data-tip="Codeforces — 1063 max">CF</div></div>
+      <div class="orbit-path orbit-4"><div class="satellite" data-tip="NPTEL Silver — 75% Python">NP</div></div>
+    </div>
+  </div>
+
+  <button class="scroll-cue" id="scrollCue" aria-label="Scroll to content">
+    <span>Scroll</span>
+    <svg width="14" height="20" viewBox="0 0 14 20"><path d="M7 1v16M2 12l5 5 5-5" stroke="currentColor" stroke-width="1.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+  </button>
+</section>
+
+<!-- MISSION LOG (Education) -->
+<section class="section" id="log">
+  <div class="section-head reveal">
+    <p class="eyebrow">FLIGHT RECORD</p>
+    <h2>Mission Log</h2>
+    <p class="section-sub">Every launch needs a trajectory. Here's mine so far.</p>
+  </div>
+
+  <div class="timeline">
+    <div class="timeline-track"></div>
+
+    <div class="timeline-item reveal">
+      <div class="timeline-dot"></div>
+      <div class="timeline-card">
+        <span class="timeline-date">08/2021 — 06/2025</span>
+        <h3>Bachelor of Technology</h3>
+        <p>ACE Engineering College · Ghatkesar, Hyderabad</p>
+        <span class="chip chip-accent">CGPA 8.83 / 10</span>
+      </div>
+    </div>
+
+    <div class="timeline-item reveal">
+      <div class="timeline-dot"></div>
+      <div class="timeline-card">
+        <span class="timeline-date">Completed 05/2021</span>
+        <h3>Higher Secondary</h3>
+        <p>S.R College · Telangana, India</p>
+        <span class="chip">892 / 1000</span>
+      </div>
+    </div>
+
+    <div class="timeline-item reveal">
+      <div class="timeline-dot"></div>
+      <div class="timeline-card">
+        <span class="timeline-date">2019</span>
+        <h3>Secondary School</h3>
+        <p>Sri Bhashyam High School · Nizamabad, TG</p>
+        <span class="chip">CGPA 8.5 / 10</span>
+      </div>
+    </div>
+
+    <div class="timeline-item reveal">
+      <div class="timeline-dot dot-flare"></div>
+      <div class="timeline-card card-flare">
+        <span class="timeline-date">06/2024 — 08/2024</span>
+        <h3>Software Developer Intern</h3>
+        <p>FROST (ACE ONLINE) · Hyderabad — software development internship</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CARGO (Skills) -->
+<section class="section" id="cargo">
+  <div class="section-head reveal">
+    <p class="eyebrow">PAYLOAD MANIFEST</p>
+    <h2>Cargo Bay</h2>
+    <p class="section-sub">What's packed on board, ready to deploy.</p>
+  </div>
+
+  <div class="cargo-grid">
+    <div class="cargo-crate reveal">
+      <h3>Web Development</h3>
+      <div class="chip-row">
+        <span class="chip">React</span><span class="chip">Express.js</span><span class="chip">Node.js</span>
+        <span class="chip">MongoDB</span><span class="chip">JavaScript</span><span class="chip">HTML</span>
+        <span class="chip">CSS</span><span class="chip">Bootstrap</span><span class="chip">Next UI</span>
+        <span class="chip">SQL</span><span class="chip">REST APIs</span><span class="chip">TensorFlow.js</span>
+      </div>
+    </div>
+    <div class="cargo-crate reveal">
+      <h3>Languages</h3>
+      <div class="chip-row">
+        <span class="chip">Java</span><span class="chip">C++</span><span class="chip">Python (basics)</span><span class="chip">JavaScript</span>
+      </div>
+    </div>
+    <div class="cargo-crate reveal">
+      <h3>Tools</h3>
+      <div class="chip-row">
+        <span class="chip">GitHub</span><span class="chip">Postman</span><span class="chip">VS Code</span>
+        <span class="chip">Vercel</span><span class="chip">Figma</span><span class="chip">Git</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LAUNCHPAD (Projects) -->
+<section class="section" id="launchpad">
+  <div class="section-head reveal">
+    <p class="eyebrow">ACTIVE MISSIONS</p>
+    <h2>Launchpad</h2>
+    <p class="section-sub">Three things I've shipped, in the order they left the pad.</p>
+  </div>
+
+  <div class="missions">
+    <article class="mission-card reveal">
+      <div class="mission-icon">
+        <svg viewBox="0 0 48 48" width="34" height="34"><path d="M24 4c6 6 8 14 8 22 0 5-2 9-4 12h-8c-2-3-4-7-4-12 0-8 2-16 8-22z" fill="none" stroke="url(#mg1)" stroke-width="2"/><circle cx="24" cy="18" r="4" fill="url(#mg1)"/><path d="M18 34l-5 8M30 34l5 8M20 42h8" stroke="url(#mg1)" stroke-width="2" fill="none" stroke-linecap="round"/><defs><linearGradient id="mg1" x1="0" y1="0" x2="48" y2="48"><stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#38bdf8"/></linearGradient></defs></svg>
+      </div>
+      <span class="mission-tag">Launch 01 · Chrome Extension</span>
+      <h3>Smart Activity Tracker</h3>
+      <p>An AI-powered system for enhancing digital work efficiency. Tracks browsing activity in real time, categorises content via APIs for productivity insights, and delivers AI-driven focus nudges based on recent behavior.</p>
+      <div class="chip-row">
+        <span class="chip chip-sm">Real-time tracking</span>
+        <span class="chip chip-sm">AI focus nudges</span>
+      </div>
+    </article>
+
+    <article class="mission-card reveal">
+      <div class="mission-icon">
+        <svg viewBox="0 0 48 48" width="34" height="34"><circle cx="24" cy="24" r="18" fill="none" stroke="url(#mg2)" stroke-width="2"/><path d="M10 20h28M10 28h28" stroke="url(#mg2)" stroke-width="1.4" opacity="0.6"/><path d="M20 6c-4 6-6 12-6 18s2 12 6 18M28 6c4 6 6 12 6 18s-2 12-6 18" stroke="url(#mg2)" stroke-width="1.4" fill="none" opacity="0.6"/><defs><linearGradient id="mg2" x1="0" y1="0" x2="48" y2="48"><stop offset="0" stop-color="#38bdf8"/><stop offset="1" stop-color="#8b5cf6"/></linearGradient></defs></svg>
+      </div>
+      <span class="mission-tag">Launch 02 · Chrome Extension</span>
+      <h3>WORDPOP</h3>
+      <p>A vocabulary companion that surfaces a new word every time a new browser window opens, with instant meanings — turning idle moments into small learning wins.</p>
+      <div class="chip-row">
+        <span class="chip chip-sm">New word per window</span>
+        <span class="chip chip-sm">Instant definitions</span>
+      </div>
+      <a class="mission-link" href="https://github.com/saikrishna1506/WordPop" target="_blank" rel="noopener">Explore repo ↗</a>
+    </article>
+
+    <article class="mission-card reveal">
+      <div class="mission-icon">
+        <svg viewBox="0 0 48 48" width="34" height="34"><rect x="7" y="10" width="34" height="22" rx="4" fill="none" stroke="url(#mg3)" stroke-width="2"/><path d="M14 38l6-6M34 38l-6-6" stroke="url(#mg3)" stroke-width="2" stroke-linecap="round"/><circle cx="17" cy="21" r="2" fill="url(#mg3)"/><circle cx="24" cy="21" r="2" fill="url(#mg3)"/><circle cx="31" cy="21" r="2" fill="url(#mg3)"/><defs><linearGradient id="mg3" x1="0" y1="0" x2="48" y2="48"><stop offset="0" stop-color="#8b5cf6"/><stop offset="1" stop-color="#38bdf8"/></linearGradient></defs></svg>
+      </div>
+      <span class="mission-tag">Launch 03 · MERN Stack</span>
+      <h3>CHATROOMS</h3>
+      <p>A real-time chat application for dynamic user interaction, with full authentication and authorization, plus personalized chat room creation and joining via room IDs.</p>
+      <div class="chip-row">
+        <span class="chip chip-sm">Auth & authorization</span>
+        <span class="chip chip-sm">Room-based chat</span>
+      </div>
+      <a class="mission-link" href="https://chatrooms-saikrishna01.vercel.app/" target="_blank" rel="noopener">View live ↗</a>
+    </article>
+  </div>
+</section>
+
+<!-- TRANSMISSIONS (Achievements) -->
+<section class="section" id="transmissions">
+  <div class="section-head reveal">
+    <p class="eyebrow">INCOMING SIGNALS</p>
+    <h2>Transmissions</h2>
+    <p class="section-sub">Ratings and recognitions picked up along the way.</p>
+  </div>
+
+  <div class="badge-row">
+    <div class="badge-patch reveal">
+      <div class="patch-ring"><span>2★</span></div>
+      <h4>CodeChef</h4>
+      <p>2-star rated</p>
+    </div>
+    <div class="badge-patch reveal">
+      <div class="patch-ring"><span>1500</span></div>
+      <h4>LeetCode</h4>
+      <p>Contest rating</p>
+    </div>
+    <div class="badge-patch reveal">
+      <div class="patch-ring"><span>1063</span></div>
+      <h4>Codeforces</h4>
+      <p>Max rating</p>
+    </div>
+    <div class="badge-patch reveal">
+      <div class="patch-ring"><span>75%</span></div>
+      <h4>NPTEL Silver</h4>
+      <p>Python</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact-section" id="contact">
+  <div class="contact-panel reveal">
+    <p class="eyebrow">READY FOR CONTACT</p>
+    <h2>Let's build something that leaves orbit.</h2>
+    <p class="section-sub">Open to software development roles and internships.</p>
+
+    <div class="contact-grid">
+      <a class="contact-item" href="mailto:saikrishnachintha06@gmail.com">
+        <span class="contact-label">Email</span>
+        <span class="contact-value">saikrishnachintha06@gmail.com</span>
+      </a>
+      <a class="contact-item" href="tel:+918121055251">
+        <span class="contact-label">Phone</span>
+        <span class="contact-value">+91 81210 55251</span>
+      </a>
+      <a class="contact-item" href="https://github.com/saikrishna1506/" target="_blank" rel="noopener">
+        <span class="contact-label">GitHub</span>
+        <span class="contact-value">github.com/saikrishna1506</span>
+      </a>
+      <a class="contact-item" href="https://www.linkedin.com/in/sai-krishna123321/" target="_blank" rel="noopener">
+        <span class="contact-label">LinkedIn</span>
+        <span class="contact-value">in/sai-krishna123321</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>Chintha Saikrishna · Hyderabad, India</p>
+</footer>
+
+<script src="/js/script.js"></script>
+</body>
+</html>
