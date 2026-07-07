@@ -1,0 +1,12 @@
+{
+  "name": "saikrishna-portfolio",
+  "version": "1.0.0",
+  "description": "Chintha Saikrishna — developer portfolio, styled as a code editor",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}
